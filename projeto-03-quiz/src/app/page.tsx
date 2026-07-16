@@ -20,7 +20,7 @@ export default function Home() {
     e.preventDefault();
 
 
-    await fetch("/api/user", {
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/user`, {
       method: "POST",
       body: JSON.stringify({ email: newEmail, name: newName }),
     });

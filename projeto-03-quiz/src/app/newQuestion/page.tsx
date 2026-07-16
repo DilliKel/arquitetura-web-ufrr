@@ -17,7 +17,7 @@ export default function NewQuestion() {
 
     const handleSubmitIniciar: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
-        await fetch("/api/question", {
+        await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/question`, {
             method: "POST",
             body: JSON.stringify({
                 question,
