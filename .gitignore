@@ -1,0 +1,23 @@
+# Node
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Env
+.env
+.env.local
+.env.production
+
+# Prisma
+*.db
+*.db-journal
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/

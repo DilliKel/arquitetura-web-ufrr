@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+:root { /* Declaração das variáveis de cores daki pra baixo*/
+  --maincolor: #16FF00; /* Cor do Painel */
+  --bgcolor: #EEEEEE; /* Cor do Fundo Claro */
+  --textcolor: #000000; /* Cor do fundo escuro */
+  --boxcolor: #535353; /* Cor doas caixas do site */
+}
+
+/* ----------- INÍCIO BOTÃO DE VOLTAR PARA O TOPO  -------------*/
+#backToTopBtn {
+  display: none; /* Inicialmente esconde o botão */
+  position: fixed; /* Fixa a posição do botão na tela */
+  padding: 10px; /* Espaçamento interno do botão */
+  background-color: var(--maincolor); /* Cor de fundo do botão, usando variável CSS */
+  color: #000000; /* Cor do texto do botão */
+  border: 1; /* Borda do botão */
+  border-radius: 50%; /* Arredondamento do botão para fazer um círculo */
+  cursor: pointer; /* Indica que o botão é clicável */
+  width: 50px; /* Largura do botão */
+  height: 50px; /* Altura do botão */
+  font-size: 24px; /* Tamanho da fonte do ícone dentro do botão */
+
+  bottom: 20px; /* Distância do fundo da tela */
+  right: 20px; /* Distância da direita da tela */
+  z-index: 9999; /* Ordem de empilhamento, coloca o botão acima de outros elementos */
+}
+#backToTopBtn:hover {
+  background-color: #00d800;
+}
+/* ----------- FIM BOTÃO DE VOLTAR PARA O TOPO  -------------*/
+
+/* ------------------- INÍCIO BOTÃO DE MODO NOTURNO ------------*/
+/* Posicionamento do botão na tela */
+.theme-toggle {
+  position: fixed; /* Posição fixa na tela */
+  bottom: 20px; /* Distância do fundo da tela */
+  left: 20px; /* Distância da esquerda da tela */
+  z-index: 9999; /* Ordem de empilhamento acima de outros elementos */
+}
+
+/* Estilos do Botão Arredondado */
+.round-button {
+  width: 50px; /* Largura do botão */
+  height: 50px; /* Altura do botão */
+  border: 1; /* Remove a borda do botão */
+  border-radius: 50%; /* Arredondamento para fazer um círculo */
+  font-size: 24px; /* Tamanho da fonte do ícone dentro do botão */
+  line-height: 1; /* Define o alinhamento vertical do texto do botão */
+  background-color: var(--maincolor); /* Cor de fundo do botão usando variável CSS */
+  color: #000000; /* Cor do ícone do botão */
+  cursor: pointer; /* Indica que o botão é clicável */
+  transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave para cor de fundo e ícone */
+}
+
+/* Efeito de hover (quando o mouse está sobre o botão) */
+.round-button:hover {
+  background-color: #00d800;
+}
+
+.dark-mode {
+  background-color: #000000; /* Cor do fundo no modo noturno */
+  color: #ffffff; /* Cor dos títulos no modo noturno */
+}
+
+.dark-mode .sociallist li a {
+  background: #444444; /* Cor do fundo das redes sociais */
+  color: #ffffff; /* Cor dos nomes das redes sociais */
+  box-shadow: 0 4px 6px 0 #b2b2b2; /* Cor da sombra padrão da box redes sociais */
+}
+
+.dark-mode .information{
+  background: var(--boxcolor); /* Cor da caixa do "Sobre mim */
+  color: #fff;
+}
+
+.dark-mode .grid_container{
+  background: var(--boxcolor); /* Cor da caixa das Skills */
+}
+.dark-mode .grid_container_works{
+  background: var(--boxcolor);  /* Cor da caixa dos projetos */
+  color: #fff;
+}
+
+.dark-mode .contact-details{
+  background: var(--boxcolor); /* Cor da caixa do Formulário */
+  color: #fff;
+}
+
+.light-mode {
+  background-color: #F1F0E8; /* Cor do fundo no modo claro */
+  color: #000000; /* Cor dos títulos no modo claro */
+}
+/* ------------------- FIM BOTÃO DE MODO NOTURNO ------------*/
+
+.nav_ul_li_a {
+  color: #fff; /* Cor dos botões da barra de navegação */
+  text-decoration: none;
+  padding: 2px;
+}
+.nav_ul_li_a:hover {
+  opacity: 0.8;
+}
+.nav_ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+.logo_nav {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: var(--maincolor); /* Cor da barra de navegação */
+  height: 9vh;
+  width: 100vw;
+}
+.nav_ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.nav_ul li {
+  text-align: center;
+  letter-spacing: 3px;
+  margin-left: 32px;
+  padding: 6px;
+}
+
+.nav_ul_li_a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Criar as barras do menu para telefone */
+.nav_menu_bars div {
+  width: 32px;
+  height: 2px;
+  background: #ffffff;
+  margin: 8px;
+  transition: 0.3s;
+}
+/* Para ocultar as barras do menu de telefone na página do site para computadores */
+.nav_menu_bars {
+  display: none;
+  cursor: pointer;
+}
+
+/* --------------------- MAIN --------------------- */
+body {
+  overflow-x: hidden;
+}
+/*Primeira página com foto e descrição.*/
+.description {
+  height: 91vh;
+  display: flex;
+  width: 75vw;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12vw;
+}
+.main_photo {
+  display: flex;
+  flex-basis: 50%;
+  border-radius: 50%;
+  justify-content: center;
+  padding: 15px;
+}
+.main_photo img {
+  width: 350px;
+  height: 350px;
+  margin: 100px 0;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: -1;
+  box-shadow: 4px 0 10px 0 #777, 8px 0 10px 0 #aaa, 12px 0 10px 0 #eee;
+}
+.description_text {
+  flex-basis: 50%;
+  padding: 15px 35px 0 20px;
+  width: 100%;
+}
+.greeting {
+  letter-spacing: 1.5px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 2.5em;
+  letter-spacing: 2.5px;
+  margin: 24px 0;
+}
+h1 span {
+  color: var(--maincolor);
+}
+.smalldescription {
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  min-width: 250px;
+  line-height: 1.5;
+}
+.smalldescription span {
+  color: var(--maincolor);
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+/*-----------------LINKS GITHUB/LINKEDIN--------------------------------------------*/
+.socialmedia {
+  display: flex;
+  margin-top: 30px;
+}
+.resumelink {
+  background: var(--maincolor);
+  margin: -13px 0;
+  padding: 15px 35px;
+  border-radius: 40px;
+  letter-spacing: 2.5px;
+  font-size: 1rem;
+  font-weight: 300;
+  display: inline-block;
+  transition: box-shadow 0.2s;
+  color: #eee;
+  text-decoration: none;
+}
+.resumelink:hover {
+  box-shadow: 0 2px 15px 0 #00b30c;
+}
+.sociallist {
+  margin: 40px 0;
+  list-style: none;
+  display: flex;
+}
+.sociallist li a {
+  margin: 0 14px;
+  padding: 9px 10px;
+  background: #fff;
+  border-radius: 6px;
+  color: var(--maincolor);
+  border: 1px solid #ccc;
+  box-shadow: 4px 0 10px 0 #777, 8px 0 10px 0 #aaa, 12px 0 10px 0 #eee;
+}
+.sociallist li a:hover {
+  box-shadow: 0 2px 15px 0 #00ff04;
+}
+.sociallist li a i {
+  color: var(--maincolor);
+}
+/*---------------ABOUT ME----------------------------------------------------.*/
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 60px;
+}
+.titulo-about {
+  margin: 50px 20px;
+  padding-top: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+.information {
+  color: #0a0a0a;
+  background: #fff;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  width: 75vw;
+  text-align: justify;
+  align-self: center;
+}
+
+/*--------------SKILLS-----------------------------------------------------------------*/
+.skills {
+  margin: 0 60px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.titulo-skills {
+  margin: 50px 20px;
+  padding-top: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+.grid_container {
+  display: flex;
+  flex-wrap: wrap; /* Quebra as imagens em várias linhas, se necessário */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 50px;
+  list-style: none;
+  grid-column-gap: 45px;
+  grid-row-gap: 50px;
+  width: 75vw;
+  align-self: center;
+  gap: 60px; /* Espaçamento entre as imagens */
+}
+.grid_items {
+  justify-self: center;
+  padding: 10px 4px 5px 4px;
+  border-radius: 20px;
+  border: 0.5px solid #aaa;
+  transition-duration: 0.2s;
+}
+.grid_items:hover {
+  box-shadow: 0 2px 15px 0 #aaa;
+}
+.grid_items p {
+  padding: 1px;
+  font-size: 14px;
+  text-align: center;
+}
+.grid_items img {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+}
+.sketchup {
+  transform: scaleY(2.5);
+  margin-bottom: 10px;
+}
+
+/*---------------PROJECTS----------------------------------------------------------*/
+.works {
+  margin: 0 60px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titulo-works {
+  margin: 50px 20px;
+  padding-top: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+  display: block;
+}
+.grid_container_works {
+  display: grid;
+  grid-template-columns: repeat(2, 30vw);
+  grid-template-rows: repeat(3, 18vw);
+  justify-content: center;
+  align-self: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 50px;
+  width: 75vw;
+}
+.grid_items_div {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center; /* Adicione isso para centralizar o texto */
+}
+
+.grid_items_div h3 {
+  margin-top: 15px; /* Ajuste o espaçamento entre imagem e título */
+  text-align: center;
+}
+
+.grid_items_works {
+  width: 20vw;
+  height: 12vw;
+  border-radius: 20px;
+}
+.grid_items_works:hover {
+  box-shadow: 0 3px 15px 0 #555;
+}
+/*-------------CONTACT-----------------------------------------------------------------------*/
+.contact {
+  margin: 0 60px;
+  display: flex;
+  flex-direction: column;
+}
+.titulo-contact {
+  margin: 0px 20px;
+  padding-top: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  margin: 50px 35px;
+  width: 75vw;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.contact-details-email {
+  margin: 30px;
+  margin-top: 30px;
+  transition-duration: 0.7s;
+  border-radius: 10px;
+  border: 0.5px solid #ddd;
+}
+.contact-details-email img {
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+.contact-details-email a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--maincolor);
+  font-size: 18px;
+}
+.contact-details-email p {
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+.contact-details-email:hover {
+  box-shadow: 0 2px 15px 0 #aaa;
+}
+.titulo-contact_form {
+  margin: 10px 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  align-self: flex-start;
+}
+.form_contact {
+  padding: 20px;
+  margin: 10px;
+  height: 60vh;
+}
+.name {
+  height: 8vh;
+  width: 32.4vw;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: 0.4vw;
+  padding: 7px;
+  border-color: #aaa;
+  border-style: solid;
+}
+.email {
+  display: inline;
+  height: 8vh;
+  width: 36.5vw;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 7px;
+  border-color: #aaa;
+  border-style: solid;
+}
+.subject {
+  height: 8vh;
+  width: 70vw;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 7px;
+  border-color: #aaa;
+  border-style: solid;
+}
+.form_contact textarea {
+  resize: none;
+  height: 25vh;
+  width: 70vw;
+  margin: 10px 0;
+  border-radius: 15px;
+  padding: 10px;
+}
+.submit {
+  margin-top: 15px;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 1px solid #aaa;
+  color: #eee;
+  background: var(--maincolor);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+  cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+  transition: box-shadow 0.3s; /* Adiciona um efeito de transição à sombra */
+  margin-top: -3px; /* Ajuste a margem superior para mover o botão para cima */
+
+}
+
+.submit:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma leve sombra quando o botão é hover */
+}
+
+.submit:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra mais escura quando o botão é clicado */
+}
+/* ------------------FOOTER------------------------------------------------------------------------ */
+footer {
+  margin-top: 15px;
+  width: 100vw;
+  height: 8vh;
+  bottom: 0;
+  display: inline-block;
+  background-color: var(--maincolor);
+}
+.copyright {
+  text-align: center;
+  padding: 2vh 0;
+  font-weight: bold;
+  color: #eee;
+  font-size: 1rem;
+}
+/* --------------------RESPONSIVIDADE------------------------------------------ */
+@media screen and (min-width: 300px) and (max-width: 750px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav_ul {
+    flex-direction: column;
+    position: absolute;
+    top: 9vh;
+    right: 0;
+    width: 36vw;
+    height: 91vh;
+    background: #23232e;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(110%);
+    opacity: 0.9;
+    transition: transform 0.3s ease-in;
+    display: none;
+  }
+  .nav_ul li {
+    margin-left: 0;
+    opacity: 1;
+  }
+  .nav_menu_bars {
+    display: block;
+  }
+  /*Quando esta ativo o botão do menu a lista de links volta para o lugar que deve*/
+  .nav_ul_active {
+    transform: translateX(0);
+    display: flex;
+  }
+  /*Quando as barras do menu estão ativas mudam de posição formando um x */
+  .nav_menu_bars_active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  .nav_menu_bars_active .line2 {
+    opacity: 0;
+  }
+  .nav_menu_bars_active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  /*Animação dos links do menu para telefones*/
+  @keyframes navLinksEntrance {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .description {
+    display: block;
+    margin-bottom: 250px;
+  }
+  .description_text {
+    text-align: center;
+  }
+  .socialmedia {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .main_photo img {
+    width: 250px;
+    height: 250px;
+  }
+  .sociallist li a:hover {
+    box-shadow: 0 2px 15px 0 #000070;
+  }
+  .sociallist li a i {
+    color: var(--maincolor);
+  }
+  .titulo-about {
+    margin-top: 10vh;
+    margin-bottom: 40px;
+  }
+  .grid_container_works {
+    grid-template-columns: repeat(2, 35vw);
+    grid-template-rows: repeat(3, 27vw);
+  }
+  .grid_items_works {
+    width: 25vw;
+    height: 17vw;
+  }
+  .grid_items_div h3 {
+    text-align: center;
+    font-size: 2.5vw;
+  }
+  .name {
+    width: 32vw;
+  }
+}
+
+/* -------------------Página do Obrigado a partir dakir ------------*/
+body {
+  background-color: #ffffff;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.thank-you-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.thank-you-content {
+  text-align: center;
+}
+.return-link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.return-link:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+/* ------------------- FIM Página do Obrigado------------*/
+
+/* ------------------- PARTE DA TRADUÇÃO DA PÁGINA------------*/
+
+.flags img {
+  margin-right: 0px; /* Espaçamento entre as bandeiras */
+  cursor: pointer; /* Indica que os botões são clicáveis */
+}
+
+/* Esconde todos os elementos de texto com a classe "greeting" */
+.greeting {
+  display: none;
+}
