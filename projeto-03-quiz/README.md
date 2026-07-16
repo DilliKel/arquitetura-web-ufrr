@@ -13,7 +13,7 @@ Aplicação de quiz sobre Ciência da Computação com cadastro de usuário, cor
 
 ## Stack
 
-TypeScript · Next.js (App Router) · Prisma · SQLite · Tailwind CSS
+TypeScript · Next.js (App Router) · Prisma · PostgreSQL (Neon) · Tailwind CSS
 
 ## Como rodar localmente
 
@@ -23,7 +23,7 @@ npx prisma generate
 npm run dev
 ```
 
-Crie um `.env` a partir do `.env.example` antes de rodar.
+Crie um `.env` a partir do `.env.example`, preenchendo `DATABASE_URL` (pooled) e `DATABASE_URL_UNPOOLED` (direta, usada pelas migrations) com a connection string do banco Postgres (Neon).
 
 ---
 
