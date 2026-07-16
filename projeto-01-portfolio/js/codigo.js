@@ -1,3 +1,11 @@
+// ---------------------- Redirecionamento do formulário de contato: ----------------------
+document.addEventListener("DOMContentLoaded", function() {
+    var nextField = document.querySelector('input[name="_next"]');
+    if (nextField) {
+        nextField.value = new URL("obrigado.html", window.location.href).href;
+    }
+});
+
 // ---------------------- Botão de voltar para o topo: ----------------------
 document.addEventListener("DOMContentLoaded", function() {
     var backToTopBtn = document.getElementById("backToTopBtn");
