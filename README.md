@@ -2,6 +2,10 @@
 
 Repositório com os projetos desenvolvidos na disciplina **DCC704 — Arquitetura e Tecnologias de Sistemas Web**, cursada na **Universidade Federal de Roraima (UFRR)** no semestre **2023.2**.
 
+🔗 **Deploy:** [arquitetura-web-ufrr.vercel.app](https://arquitetura-web-ufrr.vercel.app)
+
+![Landing page](./midias/homepage.png)
+
 | | |
 |---|---|
 | 📚 Disciplina | DCC704 — Arquitetura e Tecnologias de Sistemas Web |
