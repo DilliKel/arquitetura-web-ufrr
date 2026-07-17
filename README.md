@@ -26,4 +26,4 @@ Repositório com os projetos desenvolvidos na disciplina **DCC704 — Arquitetur
 ## Autor
 
 **Kelvin Araújo Ferreira**
-[linkedin.com/in/dillikel](https://linkedin.com/in/dillikel)
+[linkedin.com/in/dillikel](https://linkedin.com/in/dillikel) · [github.com/DilliKel](https://github.com/DilliKel)
