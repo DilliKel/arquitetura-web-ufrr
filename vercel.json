@@ -1,24 +1,5 @@
 {
-  "builds": [
-    {
-      "src": "projeto-03-quiz/package.json",
-      "use": "@vercel/next"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "style.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "projeto-01-portfolio/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "projeto-02-teclado/**",
-      "use": "@vercel/static"
-    }
+  "rewrites": [
+    { "source": "/projeto-03-quiz/:path*", "destination": "https://REPLACE_WITH_QUIZ_PROJECT_DOMAIN.vercel.app/projeto-03-quiz/:path*" }
   ]
 }
