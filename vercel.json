@@ -1,7 +1,4 @@
 {
-  "rewrites": [
-    { "source": "/projeto-03-quiz/(.*)", "destination": "/projeto-03-quiz/$1" }
-  ],
   "builds": [
     {
       "src": "projeto-03-quiz/package.json",
@@ -12,11 +9,15 @@
       "use": "@vercel/static"
     },
     {
-      "src": "projeto-01-portfolio/index.html",
+      "src": "style.css",
       "use": "@vercel/static"
     },
     {
-      "src": "projeto-02-teclado/index.html",
+      "src": "projeto-01-portfolio/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "projeto-02-teclado/**",
       "use": "@vercel/static"
     }
   ]
