@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/projeto-03-quiz/:path*", "destination": "https://REPLACE_WITH_QUIZ_PROJECT_DOMAIN.vercel.app/projeto-03-quiz/:path*" }
+    { "source": "/projeto-03-quiz/:path*", "destination": "https://projeto-03-quiz-kelvin-dillis-projects.vercel.app/projeto-03-quiz/:path*" }
   ]
 }
